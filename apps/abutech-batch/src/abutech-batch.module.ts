@@ -4,8 +4,8 @@ import { AbutechBatchService } from './abutech-batch.service';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [ConfigModule.forRoot()],
-  controllers: [AbutechBatchController],
-  providers: [AbutechBatchService],
+	imports: [ConfigModule.forRoot()],
+	controllers: [AbutechBatchController],
+	providers: [AbutechBatchService],
 })
 export class AbutechBatchModule {}
