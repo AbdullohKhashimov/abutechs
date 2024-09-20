@@ -1,8 +1,32 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/abutech-api/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/abutech-api/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/abutech-api",
+  "projects": {
+    "abutech-api": {
+      "type": "application",
+      "root": "apps/abutech-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/abutech-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/abutech-api/tsconfig.app.json"
+      }
+    },
+    "abutech-batch": {
+      "type": "application",
+      "root": "apps/abutech-batch",
+      "entryFile": "main",
+      "sourceRoot": "apps/abutech-batch/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/abutech-batch/tsconfig.app.json"
+      }
+    }
   }
 }

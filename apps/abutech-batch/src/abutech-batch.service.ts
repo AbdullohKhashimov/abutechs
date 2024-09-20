@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class AppService {
+export class AbutechBatchService {
   getHello(): string {
-    return 'Hello World!';
+    return 'This is Abutech Batch server!';
   }
 }
